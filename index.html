@@ -706,6 +706,8 @@ body{
             {
                 returnValue = this.passages[0].text;
                 returnValue = this.escapeStringForHTML(returnValue);
+                similarity = `100%`;
+                document.getElementById('percentageS').textContent = ` SIMILARITY:${similarity}`
             }
             else
             {
