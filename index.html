@@ -198,13 +198,13 @@ body{
     
   
     <div>
-        <div id="percentageD">DIFFERENCE:</div>
-        <div id="percentageS">SIMILARITY:</div>
+        <div id="percentageD">DIFFERENCE :</div>
+        <div id="percentageS">SIMILARITY: </div>
         <br>
         <br>
         <label>Result:</label>
         <br />
-        <div id="textareaDifferences" style="border:1px solid;height:200px; width: 100%; min-height:25%;overflow: scroll;"></div>
+        <div contenteditable="true" id="textareaDifferences" style="border:1px solid;height:200px; width: 100%; min-height:25%;overflow: scroll;"></div>
     </div>
 
     <button id="btn-export" onclick="exportHTML();">Export to word
@@ -697,17 +697,20 @@ body{
             var textBefore = document.getElementById("textareaBefore").value;
         var textAfter = document.getElementById("textareaAfter").value;
         
-        var difference = Math.floor(this.passages[0].text.length / textBefore.length * 100 );
-            var similarity = Math.floor(100 - difference) ;
-            var returnValue = "";
+        var removed = Math.floor(this.passages[0].text.length);
+        var added = Math.floor(this.passages[1].text.length);
+       
             
+            var similarity =Math.floor(100 - (removed + added));
+            var difference =  Math.floor(100 - similarity);
+            var returnValue = "";
       
             if (this.doPassagesMatch == true)
             {
                 returnValue = this.passages[0].text;
                 returnValue = this.escapeStringForHTML(returnValue);
-                similarity = `100%`;
-                document.getElementById('percentageS').textContent = ` SIMILARITY:${similarity}`
+                similarity = `100`;
+                difference = "No Difference";
             }
             else
             {
@@ -718,19 +721,23 @@ body{
                 returnValue += "</mark>"; 
             if(difference <= 0){
                 difference = "No difference";
+                similarity = similarity;
             document.getElementById('percentageD').textContent = `DIFFERENCE: ${difference }`;
             document.getElementById('percentageS').textContent = ` SIMILARITY:${similarity}% `;
             console.log(difference, similarity);
             } else if( similarity <= 0){
+                difference = difference;
                 similarity = "No similarity";
                 document.getElementById('percentageD').textContent = `DIFFERENCE: ${difference }%`;
             document.getElementById('percentageS').textContent = ` SIMILARITY:${similarity} `;
             } else{
+                difference = difference;
+                similarity = similarity;
                 document.getElementById('percentageD').textContent = `DIFFERENCE: ${difference }%`;
             document.getElementById('percentageS').textContent = ` SIMILARITY:${similarity}% `;
             }
 
-            document.getElementById('percentageD').textContent = `DIFFERENCE: ${difference }`;
+            document.getElementById('percentageD').textContent = `DIFFERENCE: ${difference }%`;
             document.getElementById('percentageS').textContent = ` SIMILARITY:${similarity}% `;
             console.log(difference, similarity);
             }
