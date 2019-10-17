@@ -701,7 +701,7 @@ body{
         var added = Math.floor(this.passages[1].text.length);
        
             
-            var similarity =Math.floor(100 - (removed + added));
+            var similarity =Math.floor((textBefore.length - (removed + added))/ textBefore.length * 100);
             var difference =  Math.floor(100 - similarity);
             var returnValue = "";
       
@@ -709,8 +709,6 @@ body{
             {
                 returnValue = this.passages[0].text;
                 returnValue = this.escapeStringForHTML(returnValue);
-                similarity = `100`;
-                difference = "No Difference";
             }
             else
             {
