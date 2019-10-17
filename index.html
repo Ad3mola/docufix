@@ -698,17 +698,15 @@ body{
         var textAfter = document.getElementById("textareaAfter").value;
         
         var difference = Math.floor(this.passages[0].text.length / textBefore.length * 100) ;
-            var similarity = Math.floor(difference - 100 );
+            var similarity = Math.floor(100 - difference );
             var returnValue = "";
       
             if (this.doPassagesMatch == true)
             {
                 returnValue = this.passages[0].text;
                 returnValue = this.escapeStringForHTML(returnValue);
-                difference = "No difference";
-                similarity = "100%";
             document.getElementById('percentageD').textContent = `DIFFERENCE: ${difference }`;
-            document.getElementById('percentageS').textContent = ` SIMILARITY:${similarity}% `;
+            document.getElementById('percentageS').textContent = ` SIMILARITY:${similarity}`;
             }
             else
             {
