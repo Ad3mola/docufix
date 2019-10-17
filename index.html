@@ -697,16 +697,14 @@ body{
             var textBefore = document.getElementById("textareaBefore").value;
         var textAfter = document.getElementById("textareaAfter").value;
         
-        var difference = Math.floor(this.passages[0].text.length / textBefore.length * 100) ;
-            var similarity = Math.floor(100 - difference );
+        var difference = this.passages[1].text.length / textBefore.length * 100 ;
+            var similarity = 100 - difference ;
             var returnValue = "";
       
             if (this.doPassagesMatch == true)
             {
                 returnValue = this.passages[0].text;
                 returnValue = this.escapeStringForHTML(returnValue);
-            document.getElementById('percentageD').textContent = `DIFFERENCE: ${difference }`;
-            document.getElementById('percentageS').textContent = ` SIMILARITY:${similarity}`;
             }
             else
             {
@@ -724,13 +722,13 @@ body{
                 similarity = "No similarity";
                 document.getElementById('percentageD').textContent = `DIFFERENCE: ${difference }%`;
             document.getElementById('percentageS').textContent = ` SIMILARITY:${similarity} `;
-            console.log(difference, similarity);
             } else{
                 document.getElementById('percentageD').textContent = `DIFFERENCE: ${difference }%`;
             document.getElementById('percentageS').textContent = ` SIMILARITY:${similarity}% `;
             }
 
             
+            console.log(difference, similarity);
             }
             return returnValue;
         }
