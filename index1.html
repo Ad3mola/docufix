@@ -144,14 +144,13 @@ body{
                     <label for="upload1">First Document: <input
                         id="upload1"
                         type="file"
-                        accept="text/doc"
+                        accept="text/html"
                         name="files[]"
                         size="30"
                     /></label>
                     
                 </form>
             <label for="text" class="two-text">
-                
                 <div class="labels" >
                     <img class="white-txt" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571194266/samples/figma%20career-list/lario/ct8pi1qsjgonxsa7zdyn.png">
                     <span id="white-txt" class="compare">Text</span>
@@ -174,13 +173,14 @@ body{
                     /></label>
                     
                 </form>
+                
             <label for="text" class="two-text">
                 <div class="labels">
                     <img class="white-txt" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571194266/samples/figma%20career-list/lario/ct8pi1qsjgonxsa7zdyn.png">
                     <span id="white-txt" class="compare">Text</span>
                 </div>
             </label> <br>
-            <textarea placeholder="Write your text here" class="input-txt  ms_word_filtered_html" id="textareaAfter" cols="80" rows="10"></textarea>
+            <textarea placeholder="Write your text here" class="input-txt  ms_word_filtered_html" id="textareaBefore" cols="80" rows="10"></textarea>
         </div>
     </section>
     <div id="button">
@@ -198,13 +198,9 @@ body{
     
   
     <div>
-        <div id="percentageD">DIFFERENCE:</div>
-        <div id="percentageS">SIMILARITY:</div>
-        <br>
-        <br>
-        <label>Result:</label>
+        <label>Differences:</label>
         <br />
-        <div id="textareaDifferences" style="border:1px solid;height:200px; width: 100%; min-height:25%;overflow: scroll;"></div>
+        <div id="textareaDifferences" style="border:1px solid;height:200px"></div>
     </div>
 
     <button id="btn-export" onclick="exportHTML();">Export to word
@@ -216,7 +212,53 @@ body{
 
       
 <!-- user interface ends -->
-   
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+    function handleFileSelect(evt) {
+        var files = evt.target.files; // FileList object
+
+        //use the 1st file from the list
+        f = files[0];
+
+        var reader = new FileReader();
+
+        // Closure to capture the file information.
+        reader.onload = (function(theFile) {
+            return function(e) {
+                jQuery(".ms_word_filtered_html").val(e.target.result);
+            };
+        })(f);
+
+        // Read in the image file as a data URL.
+        reader.readAsText(f);
+    }
+    document
+        .getElementById("upload")
+        .addEventListener("change", handleFileSelect, false);
+
+        function handleFileSelect1(evt) {
+        var files = evt.target.files; // FileList object
+
+        //use the 1st file from the list
+        f = files[0];
+
+        var reader = new FileReader();
+
+        // Closure to capture the file information.
+        reader.onload = (function(theFile) {
+            return function(e) {
+                jQuery(".ms_word_filtered_html1").val(e.target.result);
+            };
+        })(f);
+
+        // Read in the image file as a data URL.
+        reader.readAsText(f);
+    }
+    document
+        .getElementById("upload1")
+        .addEventListener("change", handleFileSelect1, false);
+</script>
 <script type="text/javascript">
   
     // events
@@ -239,7 +281,7 @@ body{
         (
             "textareaDifferences"
         );
-        textareaDifferences.innerHTML =differencesAsString;
+        textareaDifferences.innerHTML = differencesAsString;
           
     }
       
@@ -694,21 +736,12 @@ body{
     {
         TextPassagePair.prototype.toString = function()
         {
-            var textBefore = document.getElementById("textareaBefore").value;
-        var textAfter = document.getElementById("textareaAfter").value;
-        
-        var difference = Math.floor(this.passages[0].text.length / textBefore.length * 100) ;
-            var similarity = Math.floor(difference - 100 );
             var returnValue = "";
       
             if (this.doPassagesMatch == true)
             {
                 returnValue = this.passages[0].text;
                 returnValue = this.escapeStringForHTML(returnValue);
-                difference = "No difference";
-                similarity = "100%";
-            document.getElementById('percentageD').textContent = `DIFFERENCE: ${difference }`;
-            document.getElementById('percentageS').textContent = ` SIMILARITY:${similarity}% `;
             }
             else
             {
@@ -717,23 +750,9 @@ body{
                 returnValue += "</mark><mark style='background-color:yellow'>";
                 returnValue += this.escapeStringForHTML(this.passages[1].text);
                 returnValue += "</mark>"; 
-            if(difference <= 0){
-                difference = "No difference";
-            document.getElementById('percentageD').textContent = `DIFFERENCE: ${difference }`;
-            document.getElementById('percentageS').textContent = ` SIMILARITY:${similarity}% `;
-            console.log(difference, similarity);
-            } else if( similarity <= 0){
-                similarity = "No similarity";
-                document.getElementById('percentageD').textContent = `DIFFERENCE: ${difference }%`;
-            document.getElementById('percentageS').textContent = ` SIMILARITY:${similarity} `;
-            console.log(difference, similarity);
-            } else{
-                document.getElementById('percentageD').textContent = `DIFFERENCE: ${difference }%`;
-            document.getElementById('percentageS').textContent = ` SIMILARITY:${similarity}% `;
+      
             }
-
-            
-            }
+      
             return returnValue;
         }
      
@@ -787,50 +806,6 @@ body{
        document.body.removeChild(fileDownload);
     }
 </script>
-<script>
-    function handleFileSelect(evt) {
-        var files = evt.target.files; // FileList object
 
-        //use the 1st file from the list
-        f = files[0];
-
-        var reader = new FileReader();
-
-        // Closure to capture the file information.
-        reader.onload = (function(theFile) {
-            return function(e) {
-                document.querySelector(".ms_word_filtered_html").value =e.target.result;
-            };
-        })(f);
-
-        // Read in the image file as a data URL.
-        reader.readAsText(f);
-    }
-    document
-        .getElementById("upload")
-        .addEventListener("change", handleFileSelect, false);
-
-        function handleFileSelect1(evt) {
-        var files = evt.target.files; // FileList object
-
-        //use the 1st file from the list
-        f = files[0];
-
-        var reader = new FileReader();
-
-        // Closure to capture the file information.
-        reader.onload = (function(theFile) {
-            return function(e) {
-                document.querySelector(".ms_word_filtered_html1").value =e.target.result;
-            };
-        })(f);
-
-        // Read in the image file as a data URL.
-        reader.readAsText(f);
-    }
-    document
-        .getElementById("upload1")
-        .addEventListener("change", handleFileSelect1, false);
-</script>
 </body>
 </html>
