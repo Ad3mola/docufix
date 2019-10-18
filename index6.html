@@ -14,16 +14,15 @@
             href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
         <title>Docufix</title>
     </head>
     <style>
-    /* #file-text{
+/* #file-text{
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;;
-    }
+}
     #file{
         display: flex;;
         border-right: 2px solid black;
@@ -35,11 +34,11 @@
         padding: 20px 0 20px 30px;
         align-items: center;;
     }
-    #text-compare{
+#text-compare{
     display: flex;
     padding: 30px 60px;
     justify-content: space-between;
-    }
+}
     #text-1{
         width: 44%;
     }
@@ -95,7 +94,7 @@
             vertical-align: middle;
             margin-right: 10px;
             }
-    @media screen and (max-width: 600px){
+@media screen and (max-width: 600px){
     #main-text{
         margin-bottom: 25px;
         font-size: 24px;
@@ -114,7 +113,7 @@
         width: 70%;
         font-size: 15px;
     }
-    }
+}
         .active1 {
             border-bottom: 2px solid black;
         }
@@ -122,7 +121,7 @@
             width: 100% !important;
         } */
         .active1 {
-            border-bottom: 3px solid black;
+            border-bottom: 2px solid black;
         }
         textarea{
             width: 100% !important;
@@ -131,98 +130,14 @@
             label{
                 display: block;
             }
-            img{
-                padding-top: 0 !important;
-            }
+            
         }
-        .active a{
-    color: grey !important;
-    }
-
-.shareBtn button {
-    background: #343a40;
-    color: rgb(87, 207, 244);
-    cursor: pointer;
-    display: inline-block;
-    padding: 10px 20px;
-    -webkit-border-radius: 6px;
-    border-radius: 6px;
-    border: none;
-
-}
-
-.shareBtn a {
-    text-decoration: none
-}
-
-
-.shareBtn a:hover {
-    color: rgb(87, 207, 244);
-}
-.shareBtn button:hover {
-    padding: 9px 18px;
-}
-
-.shareBtn h4 {
-    font-family: 'Ubuntu', sans-serif;
-}
-
-.shareBtn {
-    display: none;
-}
-
-::-webkit-scrollbar{
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px white;
-  border-radius: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #343a40;
-  border-radius: 8px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(130, 18, 140);
-  width: 15px;
-}
-
     </style>
-   <!-- <body style="background-color:  white; font-family: Ubuntu;">-->
-        
-        <body style="background-color:  white; font-family: Ubuntu;"   onload ="document.getElementById('id01').style.display='block'">
-
-        <!----modal box-->
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<!--<body >-->
-
-<div class="w3-container">
-  
-  <!--<button onload ="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open Modal</button>-->
-
-  <div id="id01" class="w3-modal">
-    <div class="w3-modal-content" style="border-radius: 4px;">
-      <div class="w3-container">
-        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-        
-        <h2 style="font-weight: bolder;">NOTE:</h2>
-        <p>Docufix only supports file formats like .txt .pdf .doc and .docx for <strong>uploading</strong></p>
-        <p>If you must compare documents from any other format, aside the above formats mentioned, <br> please make use of the text option, then <strong> copy</strong> and <strong> paste</strong> into the text-box.</strong></p>
-        <p>Your compared data gives you result in percentage %</p>
-        <p>You can choose to download compared documents as .doc file if you wish</p>
-        <p>Compared texts are <strong>editable,</strong> this means you can edit your work for correction after comparing.</p>
-
-    </div>
-    </div>
-  </div>
-</div>
+    <body style="background-color:  white; font-family: Ubuntu;">
         <header>
-            <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container">
-                    <a class="navbar-brand" href="index.html" style="font-weight: bold;font-size: 1.5em;"
+                    <a class="navbar-brand" href="#" style="font-weight: bold;"
                         >DOCUFIX</a
                     >
                     <button
@@ -241,14 +156,14 @@
                             class="navbar-nav ml-auto"
                             style="font-weight: bold;"
                         >
-                            <li class="nav-item ">
-                                <a class="nav-link text-light" href="about_us.html">About Us</a>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">About Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link  text-light" href="teampage.html">Team</a>
+                                <a class="nav-link" href="#">Team</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link  text-light" href="https://hng.tech/" target="_blank">Sponsors</a>
+                                <a class="nav-link" href="#">Sponsors</a>
                             </li>
                         </ul>
                     </div>
@@ -262,8 +177,8 @@
                     ><a
                         href="#"
                         id="fileBtn"
-                        class="active1 pb-1"
-                        style="text-decoration: none; color:black; margin-right: 10px;"
+                        class="active1"
+                        style="text-decoration: none; color:black;"
                         ><img class="top-icons" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193844/samples/figma%20career-list/lario/xisa8mltboqmepbzjqks.png">File</a
                     ></span
                 >
@@ -271,7 +186,7 @@
                     ><a
                         href="#"
                         id="textBtn"
-                        style="text-decoration: none; color:black; margin-left: 10px"
+                        style="text-decoration: none; color:black;"
                         ><img class="top-icons" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193193/samples/figma%20career-list/lario/slpij76xxh4f7bpixbr5.png">Text
                     </a></span
                 >
@@ -285,7 +200,7 @@
                             >
                             <input
                             id="upload1" type="file" name="file1" 
-                                style="border: 0;background-color: transparent;" required
+                                style="border: 0;background-color: transparent;"
                             />
                         </div>
                         <div class="form-group mt-5">
@@ -294,12 +209,12 @@
                             >
                             <input
                             id="upload2" type="file" name="file2" 
-                                style="border: 0;background-color: transparent;" required
+                                style="border: 0;background-color: transparent;"
                             />
                         </div>
                         <div class="form-group mt-5">
-                                <button id="uploadBtn" type="submit" value="submit" class="btn btn-dark font-weight-bold ml-md-5 mt-3 "
-                                    ><i class="fas fa-cloud-upload-alt"></i> upload</button>
+                                <input id="uploadBtn" type="submit" value="submit" class="btn btn-success ml-md-5 mt-3"
+                                    />
                             </div>
                     </form>
                 </div>
@@ -327,8 +242,7 @@
                             </div>
                             <div class="card-body">
                                 <textarea
-                                    placeholder="Write your text here" class="input-txt pl-5"
-                                     id="textareaAfter" cols="" rows="10"
+                                    placeholder="Write your text here" class="input-txt pl-5" id="textareaAfter" cols="" rows="10"
                                     style="border: 0;border-right:2px solid #444;border-left:2px solid #444;"
                                 ></textarea>
                             </div>
@@ -337,43 +251,43 @@
                 </div>
                 <div class="text-center m-5" >
                     <button value="compare" class="btn btn-dark font-weight-bold"
-                          type="submit" onclick="buttonCompareClicked();"> <img class="compare-img" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/butfaguuckar9dl0i1ug.png" width="23" height="23" style="margin-right: 10px;">Compare</button
+                          type="submit" onclick="buttonCompareClicked();"> <img class="compare-img" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/butfaguuckar9dl0i1ug.png">Compare</button
                     >
                 </div>
                 <div>
-                    <table class="table table-striped">
-                        <thead>
-                          <tr>
-                                <th scope="col">#</th>
-                            <th scope="col" class="text-center">DIFFERENCE %</th>
-                            <th scope="col" class="text-center">SIMILARITY %</th>
-                            <th scope="col" class="text-center">CHARACTER ADDED </th>
-                            <th scope="col" class="text-center">CHARACTER DELETED </th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">RESULT</th>
-                            <td id="percentageD" class="text-center"></td>
-                            <td  id="percentageS" class="text-center"></td>
-                            <td id="added" class="text-center"></td>
-                            <td id="deleted" class="text-center"></td>
-                          </tr>
-                        </tbody>
-                      </table>
+                        <table class="table table-striped">
+                                <thead>
+                                  <tr>
+                                        <th scope="col">#</th>
+                                    <th scope="col">DIFFERENCE</th>
+                                    <th scope="col">SIMILARITY</th>
+                                    <th scope="col">CHARACTER ADDED</th>
+                                    <th scope="col">CHARACTER DELETED</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">RESULT</th>
+                                    <td id="percentageD"></td>
+                                    <td  id="percentageS"></td>
+                                    <td id="added"></td>
+                                    <td id="deleted"></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                    <!-- <div id="percentageD">DIFFERENCE :</div>
+                    <div id="percentageS">SIMILARITY: </div>
+                    <div id="added"> </div>
+                    <div id="deleted"></div>
+                    <br>
+                    <br> -->
                     <label>Result:</label>
                     <br />
-                    <div contenteditable="true" id="textareaDifferences" style="border:none;height:200px; width: 100%; min-height:25%;overflow: scroll; box-shadow: 0px 0px 4px 1px grey;"></div>
+                    <div contenteditable="true" id="textareaDifferences" style="border:1px solid;height:200px; width: 100%; min-height:25%;overflow: scroll;"></div>
                 </div>
             
-                <button id="btn-export" onclick="exportHTML();" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i class="fas fa-cloud-download-alt"></i> Download as word
+                <button id="btn-export" onclick="exportHTML();">Export to word
                     doc</button>
-            </div>
-            <div align="right" class="shareBtn" id="shareBtn">
-                <h4>Helpful? Please Share With Your Friends On:</h4>
-                <button class="twtShare" data-js="twitter-share"><i class="fab fa-twitter"></i> Twitter</button>
-                <button class="fbShare" data-js="facebook-share"><i class="fab fa-facebook-f"></i> Facebook</button>
-                <button class="fbShare" data-js="facebook-share"><a href="mailto:info@example.com?&subject=&body=http://docufix.ga Hey! I just compared my files for similarities on Docufix"><i class="fas fa-envelope"></i> Email</a></button>
             </div>
 
             <!-- <div id="text" style="display: none;">
@@ -423,92 +337,42 @@
                 </div>
             </div> -->
         </div>
- <footer class="page-footer font-small mdb-color pt-4" style="background: #C4C4C4;">
-
-        <div class="container text-center text-md-left">
-
-          <div class="row text-center text-md-left mt-3 pb-3">
-
-            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">Docufix</h6>
-              <p>We help you arrange, sort and put your files and data in other for easy management</p>
+        <footer
+            style="background-color: rgba(153, 157, 158, 0.808); color: white"
+        >
+            <div class="bg-dark p-4"></div>
+            <div class="container pt-4">
+                <div class="row">
+                    <div class="col-sm-2 text-center font-weight-bold">
+                        <p>DOCUFIX</p>
+                    </div>
+                    <div class="col-sm-7 text-center font-weight-bold">
+                        <p>Copyright 2019 Docufix.io and HNG6 Affiliates</p>
+                    </div>
+                    <div class="col-sm-3 text-center">
+                        <a href="#" class="p-2"
+                            ><img
+                                src="./facebook.svg"
+                                alt=""
+                                style="height: 16px; width:16px;"/></a
+                        ><a href="#" class="p-2"
+                            ><img
+                                src="./twitter.svg"
+                                alt=""
+                                style="height: 16px; width:16px;"/></a
+                        ><a href="#" class="p-2"
+                            ><img
+                                src="./instagram.svg"
+                                alt=""
+                                style="height: 16px; width:16px;"
+                        /></a>
+                    </div>
+                </div>
             </div>
-
-            <hr class="w-100 clearfix d-md-none">
-
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-              <p>
-                <a href="about_us.html">How it works</a>
-              </p>
-              <p>
-                <a href="teampage.html">Our Team</a>
-              </p>
-            </div>
-            <!-- Grid column -->
-
-            <hr class="w-100 clearfix d-md-none">
-
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-              <p>
-                <a href="index.html">Home Page</a>
-              </p>
-              <p>
-                <a href="#!">Privacy Policy</a>
-              </p>
-            </div>
-
-          </div>
-
-          <hr>
-
-          <div class="row d-flex align-items-center">
-
-            <div class="col-md-7 col-lg-8">
-
-              <p class="text-center text-md-left">© 2019 Copyright:
-                <a href="https://hng/internship">
-                  <strong> Docufix</strong>
-                </a>
-              </p>
-
-            </div>
-
-            <div class="col-md-5 col-lg-4 ml-lg-0">
-
-              <div class="text-center text-md-right">
-                <ul class="list-unstyled list-inline">
-                  <li class="list-inline-item">
-                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                      <i class="fab fa-facebook-f"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                      <i class="fab fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                      <i class="fab fa-google-plus-g"></i>
-                    </a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                      <i class="fab fa-linkedin-in"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+        </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-       <script src="https://kit.fontawesome.com/7967e81f77.js" crossorigin="anonymous"></script>
-       <script>
+        <script>
             document
                 .getElementById("fileBtn")
                 .addEventListener("click", showFile);
@@ -529,7 +393,7 @@
                 document.getElementById("textBtn").classList.add("active1");
             }
         </script>
-        <script src="fileUpload.js"></script>
+        <script src="index.js"></script>
         <script type="text/javascript">
   
             // events
@@ -553,7 +417,6 @@
                     "textareaDifferences"
                 );
                 textareaDifferences.innerHTML =differencesAsString;
-                document.getElementById("shareBtn").style.display = "block"
                   
             }
               
@@ -1015,7 +878,7 @@
                 var added = Math.floor(this.passages[1].text.length);
                
                     
-                    var similarity =Math.floor((textBefore.length - (removed + added))/ textBefore.length * 100);
+                var similarity =Math.floor((textBefore.length - (removed + added))/ textBefore.length * 100);
                     var difference =  Math.floor(100 - similarity);
                     var returnValue = "";
               
@@ -1031,37 +894,60 @@
                         returnValue += "</mark><mark style='background-color:yellow'>";
                         returnValue += this.escapeStringForHTML(this.passages[1].text);
                         returnValue += "</mark>"; 
-                    if(difference <= 0){
+                        if(difference <= 0){
                         difference = "No difference";
                         similarity = similarity;
-                    document.getElementById('percentageD').textContent = `${difference }`;
-                    document.getElementById('percentageS').textContent = ` ${similarity}`;
+                    document.getElementById('percentageD').textContent = ` ${difference }`;
+                    document.getElementById('percentageS').textContent = ` ${similarity}% `;
                     document.getElementById('added').textContent = `${added} `;
                     document.getElementById('deleted').textContent = `${removed} `;
                     console.log(difference, similarity);
                     } else if( similarity <= 0){
                         difference = difference;
                         similarity = "No similarity";
-                        document.getElementById('percentageD').textContent = ` ${difference }`;
+                        document.getElementById('percentageD').textContent = ` ${difference }%`;
                     document.getElementById('percentageS').textContent = ` ${similarity} `;
-                    document.getElementById('added').textContent = `${added} `;
-                    document.getElementById('deleted').textContent = `${removed} `;
+                    document.getElementById('added').textContent = `${added}  `;
+                    document.getElementById('deleted').textContent = `${removed}  `;
                     } else{
                         difference = difference;
                         similarity = similarity;
-                        document.getElementById('percentageD').textContent = `${difference }`;
-                    document.getElementById('percentageS').textContent = `${similarity}`;
+                        document.getElementById('percentageD').textContent = ` ${difference }%`;
+                    document.getElementById('percentageS').textContent = ` ${similarity}% `;
                     document.getElementById('added').textContent = `${added} `;
-                    document.getElementById('deleted').textContent = `${removed} `;
+                    document.getElementById('deleted').textContent = `${removed}  `;
                     }
         
-                    document.getElementById('percentageD').textContent = ` ${difference }`;
-                    document.getElementById('percentageS').textContent = `${similarity}`;
-                    document.getElementById('added').textContent = `${added} `;
-                    document.getElementById('deleted').textContent = `${removed} `;
+                    document.getElementById('percentageD').textContent = ` ${difference }%`;
+                    document.getElementById('percentageS').textContent = ` ${similarity}% `;
+                    document.getElementById('added').textContent = ` ${added}  `;
+                    document.getElementById('deleted').textContent = `${removed}  `;
                     console.log(difference, similarity);
                     }
                     return returnValue;
+                    // if(difference <= 0){
+                    //     difference = "No difference";
+                    //     similarity = similarity;
+                    // document.getElementById('percentageD').textContent = `DIFFERENCE: ${difference }`;
+                    // document.getElementById('percentageS').textContent = ` SIMILARITY:${similarity}% `;
+                    // console.log(difference, similarity);
+                    // } else if( similarity <= 0){
+                    //     difference = difference;
+                    //     similarity = "No similarity";
+                    //     document.getElementById('percentageD').textContent = `DIFFERENCE: ${difference }%`;
+                    // document.getElementById('percentageS').textContent = ` SIMILARITY:${similarity} `;
+                    // } else{
+                    //     difference = difference;
+                    //     similarity = similarity;
+                    //     document.getElementById('percentageD').textContent = `DIFFERENCE: ${difference }%`;
+                    // document.getElementById('percentageS').textContent = ` SIMILARITY:${similarity}% `;
+                    // }
+        
+                    // document.getElementById('percentageD').textContent = `DIFFERENCE: ${difference }%`;
+                    // document.getElementById('percentageS').textContent = ` SIMILARITY:${similarity}% `;
+                    // console.log(difference, similarity);
+                    // }
+                    // return returnValue;
                 }
              
                 TextPassagePair.prototype.escapeStringForHTML = function(stringToEscape)
@@ -1085,7 +971,7 @@
             }
               
             
-              var p = document.getElementById('before').inner.value;
+              var p = doucument.getElementById('before').inner.value;
             function checkpercentage(){
             
                   document.getElementById('display').innerHTML = p;
@@ -1114,26 +1000,6 @@
                document.body.removeChild(fileDownload);
             }
         </script>
-
-        <script type="text/javascript">
-          var twitterShare = document.querySelector('[data-js="twitter-share"]');
-
-            twitterShare.onclick = function(e) {
-              e.preventDefault();
-              var twitterWindow = window.open('https://twitter.com/intent/tweet?text=Hey! I just compared my files for similarities on&url=http://docufix.ga/fileUpload.html&###', 'twitter-popup', 'height=350,width=600');
-              if(twitterWindow.focus) { twitterWindow.focus(); }
-                return false;
-              }
-
-            var facebookShare = document.querySelector('[data-js="facebook-share"]');
-
-            facebookShare.onclick = function(e) {
-              e.preventDefault();
-              var facebookWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=http://docufix.ga', 'facebook-popup', 'height=350,width=600');
-              if(facebookWindow.focus) { facebookWindow.focus(); }
-                return false;
-            }
-    </script>
       
     </body>
 </html>
