@@ -150,7 +150,6 @@
         .active a{
     color: grey !important;
     }
-
 .shareBtn button {
     background: #343a40;
     color: rgb(87, 207, 244);
@@ -160,48 +159,37 @@
     -webkit-border-radius: 6px;
     border-radius: 6px;
     border: none;
-
 }
-
 .shareBtn a {
     text-decoration: none
 }
-
-
 .shareBtn a:hover {
     color: rgb(87, 207, 244);
 }
 .shareBtn button:hover {
     padding: 9px 18px;
 }
-
 .shareBtn h4 {
     font-family: 'Ubuntu', sans-serif;
 }
-
 .shareBtn {
     display: none;
 }
-
 ::-webkit-scrollbar{
   width: 8px;
 }
-
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px white;
   border-radius: 8px;
 }
-
 ::-webkit-scrollbar-thumb {
   background: #343a40;
   border-radius: 8px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(130, 18, 140);
   width: 15px;
 }
-
     </style>
    <!-- <body style="background-color:  white; font-family: Ubuntu;">-->
         
@@ -293,7 +281,7 @@
                     <form class="mb-5" id="uploadForm" method="POST" enctype="multipart/form-data">
                         <div class="row padding">
                                 <div class="custom-file col-md-6 margin">
-                                    <label for="upload1" id="label1" class="text-left mr-md-5 custom-file-label"
+                                    <label for="upload1" for="firstDocument" class="text-left mr-md-5 font-weight-bold custom-file-label"
                                         >First Document:</label
                                     >
                                     <input
@@ -309,11 +297,11 @@
                                       </div>
                                 </div>
                                 <div class="custom-file col-md-6">
-                                    <label for="upload2" id="label2" class="text-left mr-md-5 custom-file-label"
+                                    <label for="upload2" for="secondDocument" class="text-left mr-md-5 font-weight-bold custom-file-label"
                                         >Second Document:</label
                                     >
                                     <input
-                                    id="upload2" for="secondDocument" type="file" name="file2" accept="" class="custom-file-input"
+                                    id="upload2" type="file" name="file2" accept=".doc,.pdf,.txt,.docx,.csv,.xml,.json" class="custom-file-input"
                                         style="border: 0;background-color: transparent;" required
                                     />
                                     <div class="invalid-feedback">
@@ -323,7 +311,7 @@
 
                         </div>
                         <div class="form-group mt-5">
-                                <button id="uploadBtn" type="submit" value="submit" class="btn btn-dark ml-md-5 mt-3 "
+                                <button id="uploadBtn" type="submit" value="submit" class="btn btn-dark font-weight-bold ml-md-5 mt-3 "
                                     ><i class="fas fa-cloud-upload-alt"></i> upload</button>
                             </div>
                     </form>
@@ -609,7 +597,6 @@
             document
                 .getElementById("textBtn")
                 .addEventListener("click", showtext);
-
             function showFile() {
                 document.getElementById("file").style.display = "block";
                 document.getElementById("text").style.display = "none";
@@ -1212,14 +1199,12 @@
 
         <script type="text/javascript">
           var twitterShare = document.querySelector('[data-js="twitter-share"]');
-
             twitterShare.onclick = function(e) {
               e.preventDefault();
               var twitterWindow = window.open('https://twitter.com/intent/tweet?text=Hey! I just compared my files for similarities on&url=http://docufix.ga/fileUpload.html&###', 'twitter-popup', 'height=350,width=600');
               if(twitterWindow.focus) { twitterWindow.focus(); }
                 return false;
               }
-
             var facebookShare = document.querySelector('[data-js="facebook-share"]');
               
             facebookShare.onclick = function(e) {
@@ -1228,25 +1213,21 @@
               if(facebookWindow.focus) { facebookWindow.focus(); }
                 return false;
             }
-
             document.getElementById("upload1").addEventListener("change", function(e){
                 var upload1 = document.getElementById("upload1");
-                var label = document.getElementById("label1");
-                if( upload1.value.replace('C:\\fakepath\\'," ").includes(".jpg" || ".png")){
+                if(upload1.value.replace('C:\\fakepath\\'," ").includes(".jpg" || ".png")){
                     upload1.classList.add("is-invalid");
                 }else {
                     upload1.classList.remove("is-invalid");
-                    label.textContent =  upload1.value.replace('C:\\fakepath\\'," ");
+                    upload1.value.replace('C:\\fakepath\\'," ")
                 }
             });
             document.getElementById("upload2").addEventListener("change", function(e){
                 var upload2 = document.getElementById("upload2");
-                var label = document.getElementById("label2");
-                if( upload2.value.replace('C:\\fakepath\\'," ").includes(".jpg" || ".png")){
+                if(upload2.value.replace('C:\\fakepath\\'," ").includes(".jpg" || ".png")){
                     upload2.classList.add("is-invalid");
                 }else {
                     upload2.classList.remove("is-invalid");
-                    label.textContent =  upload2.value.replace('C:\\fakepath\\'," ");
                 }
             });
     </script>
