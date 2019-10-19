@@ -279,26 +279,33 @@
             <div id="file">
                 <div class="text-center mt-5">
                     <form class="mb-5" id="uploadForm" method="POST" enctype="multipart/form-data">
-                        <div class="form-group">
-                            <label for="upload1" for="firstDocument" class="mr-md-5 font-weight-bold"
+                        <div class="custom-file">
+                            <label for="upload1" for="firstDocument" class="mr-md-5 font-weight-bold custom-file-label"
                                 >First Document:</label
                             >
                             <input
                             id="upload1" 
                             type="file" 
                             name="file1" 
-                        accept=".doc,.pdf,.txt,.docx,.csv"
+                        accept=""
+                        class="custom-file-input"
                                 style="border: 0;background-color: transparent;" required
                             />
+                            <div class="invalid-feedback">
+                                No Images Allowed
+                              </div>
                         </div>
-                        <div class="form-group mt-5">
-                            <label for="upload2" for="secondDocument" class="mr-md-5 font-weight-bold"
+                        <div class="custom-file mt-5">
+                            <label for="upload2" for="secondDocument" class="mr-md-5 font-weight-bold custom-file-label"
                                 >Second Document:</label
                             >
                             <input
-                            id="upload2" type="file" name="file2" accept=".doc,.pdf,.txt,.docx,.csv"
+                            id="upload2" type="file" name="file2" accept="" class="custom-file-input"
                                 style="border: 0;background-color: transparent;" required
                             />
+                            <div class="invalid-feedback">
+                                No Images Allowed
+                              </div>
                         </div>
                         <div class="form-group mt-5">
                                 <button id="uploadBtn" type="submit" value="submit" class="btn btn-dark font-weight-bold ml-md-5 mt-3 "
@@ -1168,6 +1175,23 @@
               if(facebookWindow.focus) { facebookWindow.focus(); }
                 return false;
             }
+
+            document.getElementById("upload1").addEventListener("change", function(e){
+                var upload1 = document.getElementById("upload1");
+                if(upload1.value.includes(".jpg" || ".png")){
+                    upload1.classList.add("is-invalid");
+                }else {
+                    upload1.classList.remove("is-invalid");
+                }
+            });
+            document.getElementById("upload2").addEventListener("change", function(e){
+                var upload2 = document.getElementById("upload2");
+                if(upload2.value.includes(".jpg" || ".png")){
+                    upload2.classList.add("is-invalid");
+                }else {
+                    upload2.classList.remove("is-invalid");
+                }
+            });
     </script>
       
     </body>
