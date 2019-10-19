@@ -1232,7 +1232,7 @@
             document.getElementById("upload1").addEventListener("change", function(e){
                 var upload1 = document.getElementById("upload1");
                 var label = document.getElementById("label1");
-                if( e.target.files[0].name.includes(".jpg" || ".png")){
+                if( e.target.files[0].name.includes(".png") || e.target.files[0].name.includes(".jpg")){
                     upload1.classList.add("is-invalid");
                 }else {
                     upload1.classList.remove("is-invalid");
@@ -1242,7 +1242,7 @@
             document.getElementById("upload2").addEventListener("change", function(e){
                 var upload2 = document.getElementById("upload2");
                 var label = document.getElementById("label2");
-                if( e.target.files[0].name.includes(".jpg" || ".png")){
+                if(e.target.files[0].name.includes(".png") || e.target.files[0].name.includes(".jpg")){
                     upload2.classList.add("is-invalid");
                 }else {
                     upload2.classList.remove("is-invalid");
