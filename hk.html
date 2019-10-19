@@ -1215,16 +1215,16 @@
             }
             document.getElementById("upload1").addEventListener("change", function(e){
                 var upload1 = document.getElementById("upload1");
-                if(upload1.value.replace('C:\\fakepath\\'," ").includes(".jpg" || ".png")){
+                if(upload1.value.includes(".jpg" || ".png")){
                     upload1.classList.add("is-invalid");
                 }else {
                     upload1.classList.remove("is-invalid");
-                    upload1.value.replace('C:\\fakepath\\'," ")
+                    console.log(e.target.files[0].name);
                 }
             });
             document.getElementById("upload2").addEventListener("change", function(e){
                 var upload2 = document.getElementById("upload2");
-                if(upload2.value.replace('C:\\fakepath\\'," ").includes(".jpg" || ".png")){
+                if(upload2.value.includes(".jpg" || ".png")){
                     upload2.classList.add("is-invalid");
                 }else {
                     upload2.classList.remove("is-invalid");
