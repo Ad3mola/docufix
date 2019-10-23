@@ -17,6 +17,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
         <link rel="stylesheet" type="text/css" href="wysiwyg.css">
         <title>Docufix</title>
+        <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="
+        7r74mdmmdg00d52"></script>
     </head>
     <style>
     /* #file-text{
@@ -201,7 +203,9 @@
   background: rgb(130, 18, 140);
   width: 15px;
 }
-
+    input[type=file]{
+        display:none;
+    }
     </style>
    <!-- <body style="background-color:  white; font-family: Ubuntu;">-->
         
@@ -267,208 +271,242 @@
                 </div>
             </nav>
         </header>
-        <div class="container" style="min-height: 100vh">
-            <h3 class="pt-5 font-weight-bold">Compare Two Documents</h3>
-            <h2 class="text-center mt-5">
-                <span
-                    ><a
-                        href="#"
-                        id="fileBtn"
-                        class="active1 pb-1"
-                        style="text-decoration: none; color:black; margin-right: 10px;"
-                        ><img class="top-icons" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193844/samples/figma%20career-list/lario/xisa8mltboqmepbzjqks.png">File</a
-                    ></span
-                >
-                |<span
-                    ><a
-                        href="#"
-                        id="textBtn"
-                        style="text-decoration: none; color:black; margin-left: 10px"
-                        ><img class="top-icons" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193193/samples/figma%20career-list/lario/slpij76xxh4f7bpixbr5.png">Text
-                    </a></span
-                >
-            </h2>
-            <div id="file" >
-                <div class="text-center mt-5">
-                    <form class="mb-5" id="uploadForm" method="POST" enctype="multipart/form-data">
-                        <div class="row padding">
-                                <div class="custom-file col-md-6 margin">
-                                    <label for="upload1" id="label1" class="text-left mr-md-5 custom-file-label"
-                                        >First Document:</label
-                                    >
-                                    <input
-                                    id="upload1" 
-                                    type="file" 
-                                    name="file1" 
-                                accept=""
-                                class="custom-file-input"
-                                        style="border: 0;background-color: transparent;" required
-                                    />
-                                    <div class="invalid-feedback">
-                                        No Images Allowed
-                                      </div>
-                                </div>
-                                <div class="custom-file col-md-6">
-                                    <label for="upload2" id="label2" class="text-left mr-md-5 custom-file-label"
-                                        >Second Document:</label
-                                    >
-                                    <input
-                                    id="upload2" for="secondDocument" type="file" name="file2" accept="" class="custom-file-input"
-                                        style="border: 0;background-color: transparent;" required
-                                    />
-                                    <div class="invalid-feedback">
-                                        No Images Allowed
-                                      </div>
-                                </div>
-
+        <div style="min-height: 100vh">
+            <section class="bg-primary">
+                    <div class=" container">
+                        <div class="row">
+                                <div class="col-6 ml-auto"> <div  class="ml-auto"
+                                    ><a
+                                        href="#"
+                                        id="fileBtn"
+                                        class="active1 pb-1 text-left"
+                                        style="text-decoration: none; color:black; margin-right: 10px;"
+                                        ><img class="top-icons" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193844/samples/figma%20career-list/lario/xisa8mltboqmepbzjqks.png">File</a
+                                    ></div
+                                ></div>
+                                <div class="col-6"><span class="text-center"
+                                    ><a
+                                        href="#"
+                                        id="textBtn"
+                                        style="text-decoration: none; color:black; margin-left: 10px"
+                                        ><img class="top-icons text-right" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193193/samples/figma%20career-list/lario/slpij76xxh4f7bpixbr5.png">Text
+                                    </a></span
+                                ></div>
                         </div>
-                        <div class="form-group mt-5">
-                                <button id="uploadBtn" type="submit" value="submit" class="btn btn-dark ml-md-5 mt-3 "
+                            
+                           
+                        
+                        </div>
+            </section>
+            <section class="container">
+                
+               <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic dolorem magnam, maiores perspiciatis minima </h2>
+                
+               <div id="file" >
+                   <div class="text-center mt-5">
+                       <form class="mb-5" id="uploadForm" method="POST" enctype="multipart/form-data">
+                           <div class="row padding">
+                                   <div class=" col-md-12 margin">
+                                       <div class="card card-body justify-content-center">
+                                            <p class="font-weight-bold">Upload first copy of file here</p>
+                                            <label for="upload1"  class=" mr-md-5"
+                                                ><span id="label1" class=" btn-link"> Select file</span>
+                                                    
+                                            <input
+                                            id="upload1" 
+                                            type="file" 
+                                            name="file1" 
+                                        accept=""
+                                        class=" btn btn-outline-dark btn-link text-danger"
+                                                style="border: 0;background-color: transparent;" required
+                                            /><div id="button3">hello</div>
+                                                </label
+                                            >
+                                            
+                                            <div class="invalid-feedback" id="invalid-feedback">
+                                                No Images Allowed
+                                              </div>
+
+                                       </div>
+                                       
+                                   </div>
+   
+                           </div>
+                           
+                           <div class="row padding mt-md-5">
+                                <div class=" col-md-12">
+                                    <div class="card card-body justify-content-center">
+                                            <p class="font-weight-bold">Upload first copy of file here</p>
+                                            <label for="upload2" class="mr-md-5"
+                                                ><span id="label2" class=" btn-link"> Select file</span>
+                                                
+                                            <input
+                                            id="upload2" for="secondDocument" type="file" name="file2" accept="" class=""
+                                                style="border: 0;background-color: transparent;" required
+                                            />
+                                                </label
+                                            >
+                                            <div class="invalid-feedback" id="invalid-feedback1">
+                                                No Images Allowed
+                                              </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row padding">
+                                <div class="col-md-12">
+                                    
+                           <div class="form-group mt-5">
+                                <button id="uploadBtn" type="submit" value="submit" class="btn btn-dark ml-md-5 mt-3 form-control"
                                     ><i class="fas fa-cloud-upload-alt"></i> upload</button>
                             </div>
-                    </form>
-                </div>
-            </div>
-            <div id="text" style="display: none;">
-                <div class="row mt-5">
-                    <div class="col-md-5">
-                        <div class="card">
-                            <div class="card-header bg-dark text-light">
-                                <img class="white-txt" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571194266/samples/figma%20career-list/lario/ct8pi1qsjgonxsa7zdyn.png">Text
+                                </div>
                             </div>
-                            <div class="card-body">
-                                <textarea
-                                    placeholder="Write your text here" class="" id="textareaBefore" cols="" rows="10"
-                                    style="border: 0;border-right:2px solid #444;border-left:2px solid #444;"
-                                ></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2 text-center mt-5 mb-5" > <img style="padding-top: 50%;" id="compare-txt" class="align-middle" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/hyu5pvtsmqxymfx5ohwi.png"></div>
-                    <div class="col-md-5">
-                        <div class="card">
-                            <div class="card-header bg-dark text-light">
-                                <img class="white-txt" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571194266/samples/figma%20career-list/lario/ct8pi1qsjgonxsa7zdyn.png"> Text
-                            </div>
-                            <div class="card-body">
-                                <textarea
-                                    placeholder="Write your text here" class="input-txt"
-                                     id="textareaAfter" cols="" rows="10"
-                                    style="border: 0;border-right:2px solid #444;border-left:2px solid #444;"
-                                ></textarea>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center m-5" >
-                    <button value="compare" class="btn btn-dark font-weight-bold"
-                          type="submit" onclick="buttonCompareClicked();"> <img class="compare-img" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/butfaguuckar9dl0i1ug.png" width="23" height="23" style="margin-right: 10px;">Compare</button
-                    >
-                </div>
-                <div>
-                        <table class="table table-striped">
-                                <thead>
-                                  <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col" >RESULT</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <th scope="col">DIFFERENCE</th>
-                                    <td id="percentageD"></td>
-                                  </tr>
-                                </tbody>
-                                <tbody>
-                                    <tr>
-                                        <th scope="col">SIMILARITY</th>
-                                      <td  id="percentageS"></td>
-                                    </tr>
-                                  </tbody>
-                                  <tbody>
-                                    <tr>
-                                        <th scope="col">CHARACTER ADDED</th>
-                                      <td id="added"></td>
-                                    </tr>
-                                  </tbody>
-                                  <tbody>
-                                    <tr>
-                                        <th scope="col">CHARACTER DELETED</th>
-                                      <td id="deleted"></td>
-                                    </tr>
-                                  </tbody>
-                              </table>
-                    <!-- <table class="table table-striped">
-                        <thead>
-                          <tr>
-                                <th scope="col">#</th>
-                            <th scope="col" class="text-center">DIFFERENCE %</th>
-                            <th scope="col" class="text-center">SIMILARITY %</th>
-                            <th scope="col" class="text-center">CHARACTER ADDED </th>
-                            <th scope="col" class="text-center">CHARACTER DELETED </th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">RESULT</th>
-                            <td id="percentageD" class="text-center"></td>
-                            <td  id="percentageS" class="text-center"></td>
-                            <td id="added" class="text-center"></td>
-                            <td id="deleted" class="text-center"></td>
-                          </tr>
-                        </tbody>
-                      </table> -->
-                    <label>Result:</label>
-                    <br />
-
-                    <br>
-
-                    
-                    <div class="toolbar">
-                        <a href="#" data-command='undo'><i class='fa fa-undo'></i></a>
-                        <a href="#" data-command='redo'><i class='fa fa-repeat'></i></a>
-                        <div class="fore-wrapper"><i class='fa fa-font' style='color:#C96;'></i>
-                          <div class="fore-palette">
-                          </div>
-                        </div>
-                        <div class="back-wrapper"><i class='fa fa-font' style='background:#C96;'></i>
-                          <div class="back-palette">
-                          </div>
-                        </div>
-                        <a href="#" data-command='bold'><i class='fa fa-bold'></i></a>
-                        <a href="#" data-command='italic'><i class='fa fa-italic'></i></a>
-                        <a href="#" data-command='underline'><i class='fa fa-underline'></i></a>
-                        <a href="#" data-command='strikeThrough'><i class='fa fa-strikethrough'></i></a>
-                        <a href="#" data-command='justifyLeft'><i class='fa fa-align-left'></i></a>
-                        <a href="#" data-command='justifyCenter'><i class='fa fa-align-center'></i></a>
-                        <a href="#" data-command='justifyRight'><i class='fa fa-align-right'></i></a>
-                        <a href="#" data-command='justifyFull'><i class='fa fa-align-justify'></i></a>
-                        <a href="#" data-command='indent'><i class='fa fa-indent'></i></a>
-                        <a href="#" data-command='outdent'><i class='fa fa-outdent'></i></a>
-                        <a href="#" data-command='insertUnorderedList'><i class='fa fa-list-ul'></i></a>
-                        <a href="#" data-command='insertOrderedList'><i class='fa fa-list-ol'></i></a>
-                        <a href="#" data-command='h1'>H1</a>
-                        <a href="#" data-command='h2'>H2</a>
-                        <a href="#" data-command='createlink'><i class='fa fa-link'></i></a>
-                        <a href="#" data-command='unlink'><i class='fa fa-unlink'></i></a>
-                        <a href="#" data-command='insertimage'><i class='fa fa-image'></i></a>
-                        <a href="#" data-command='p'>P</a>
-                        <a href="#" data-command='subscript'><i class='fa fa-subscript'></i></a>
-                        <a href="#" data-command='superscript'><i class='fa fa-superscript'></i></a>
-                      </div>
-                    
-                    <div contenteditable="true" id="textareaDifferences" style="border:none;min-height:100%; width: 100%;overflow: scroll; box-shadow: 0px 0px 4px 1px grey;"></div>
-                </div>
-            
-                <button id="btn-export" onclick="exportHTML();" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i class="fas fa-cloud-download-alt"></i> Download as word
-                    doc</button>
-            </div>
-            <div align="right" class="shareBtn" id="shareBtn">
-                <h4>Helpful? Please Share With Your Friends On:</h4>
-                <button class="twtShare" data-js="twitter-share"><i class="fab fa-twitter"></i> Twitter</button>
-                <button class="fbShare" data-js="facebook-share"><i class="fab fa-facebook-f"></i> Facebook</button>
-                <button class="fbShare" data-js="facebook-share"><a href="mailto:info@example.com?&subject=&body=http://docufix.ga Hey! I just compared my files for similarities on Docufix"><i class="fas fa-envelope"></i> Email</a></button>
-            </div>
+                       </form>
+                       
+                   </div>
+               </div>
+               <div id="text" style="display: none;">
+                   <div class="row mt-5">
+                       <div class="col-md-5">
+                           <div class="card">
+                               <div class="card-header bg-dark text-light">
+                                   <img class="white-txt" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571194266/samples/figma%20career-list/lario/ct8pi1qsjgonxsa7zdyn.png">Text
+                               </div>
+                               <div class="card-body">
+                                   <textarea
+                                       placeholder="Write your text here" class="" id="textareaBefore" cols="" rows="10"
+                                       style="border: 0;border-right:2px solid #444;border-left:2px solid #444;"
+                                   ></textarea>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="col-md-2 text-center mt-5 mb-5" > <img style="padding-top: 50%;" id="compare-txt" class="align-middle" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/hyu5pvtsmqxymfx5ohwi.png"></div>
+                       <div class="col-md-5">
+                           <div class="card">
+                               <div class="card-header bg-dark text-light">
+                                   <img class="white-txt" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571194266/samples/figma%20career-list/lario/ct8pi1qsjgonxsa7zdyn.png"> Text
+                               </div>
+                               <div class="card-body">
+                                   <textarea
+                                       placeholder="Write your text here" class="input-txt"
+                                        id="textareaAfter" cols="" rows="10"
+                                       style="border: 0;border-right:2px solid #444;border-left:2px solid #444;"
+                                   ></textarea>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="text-center m-5" >
+                       <button value="compare" class="btn btn-dark font-weight-bold"
+                             type="submit" onclick="buttonCompareClicked();"> <img class="compare-img" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/butfaguuckar9dl0i1ug.png" width="23" height="23" style="margin-right: 10px;">Compare</button
+                       >
+                   </div>
+                   <div>
+                           <table class="table table-striped">
+                                   <thead>
+                                     <tr>
+                                           <th scope="col">#</th>
+                                           <th scope="col" >RESULT</th>
+                                     </tr>
+                                   </thead>
+                                   <tbody>
+                                     <tr>
+                                       <th scope="col">DIFFERENCE</th>
+                                       <td id="percentageD"></td>
+                                     </tr>
+                                   </tbody>
+                                   <tbody>
+                                       <tr>
+                                           <th scope="col">SIMILARITY</th>
+                                         <td  id="percentageS"></td>
+                                       </tr>
+                                     </tbody>
+                                     <tbody>
+                                       <tr>
+                                           <th scope="col">CHARACTER ADDED</th>
+                                         <td id="added"></td>
+                                       </tr>
+                                     </tbody>
+                                     <tbody>
+                                       <tr>
+                                           <th scope="col">CHARACTER DELETED</th>
+                                         <td id="deleted"></td>
+                                       </tr>
+                                     </tbody>
+                                 </table>
+                       <!-- <table class="table table-striped">
+                           <thead>
+                             <tr>
+                                   <th scope="col">#</th>
+                               <th scope="col" class="text-center">DIFFERENCE %</th>
+                               <th scope="col" class="text-center">SIMILARITY %</th>
+                               <th scope="col" class="text-center">CHARACTER ADDED </th>
+                               <th scope="col" class="text-center">CHARACTER DELETED </th>
+                             </tr>
+                           </thead>
+                           <tbody>
+                             <tr>
+                               <th scope="row">RESULT</th>
+                               <td id="percentageD" class="text-center"></td>
+                               <td  id="percentageS" class="text-center"></td>
+                               <td id="added" class="text-center"></td>
+                               <td id="deleted" class="text-center"></td>
+                             </tr>
+                           </tbody>
+                         </table> -->
+                       <label>Result:</label>
+                       <br />
+   
+                       <br>
+   
+                       
+                       <div class="toolbar">
+                           <a href="#" data-command='undo'><i class='fa fa-undo'></i></a>
+                           <a href="#" data-command='redo'><i class='fa fa-repeat'></i></a>
+                           <div class="fore-wrapper"><i class='fa fa-font' style='color:#C96;'></i>
+                             <div class="fore-palette">
+                             </div>
+                           </div>
+                           <div class="back-wrapper"><i class='fa fa-font' style='background:#C96;'></i>
+                             <div class="back-palette">
+                             </div>
+                           </div>
+                           <a href="#" data-command='bold'><i class='fa fa-bold'></i></a>
+                           <a href="#" data-command='italic'><i class='fa fa-italic'></i></a>
+                           <a href="#" data-command='underline'><i class='fa fa-underline'></i></a>
+                           <a href="#" data-command='strikeThrough'><i class='fa fa-strikethrough'></i></a>
+                           <a href="#" data-command='justifyLeft'><i class='fa fa-align-left'></i></a>
+                           <a href="#" data-command='justifyCenter'><i class='fa fa-align-center'></i></a>
+                           <a href="#" data-command='justifyRight'><i class='fa fa-align-right'></i></a>
+                           <a href="#" data-command='justifyFull'><i class='fa fa-align-justify'></i></a>
+                           <a href="#" data-command='indent'><i class='fa fa-indent'></i></a>
+                           <a href="#" data-command='outdent'><i class='fa fa-outdent'></i></a>
+                           <a href="#" data-command='insertUnorderedList'><i class='fa fa-list-ul'></i></a>
+                           <a href="#" data-command='insertOrderedList'><i class='fa fa-list-ol'></i></a>
+                           <a href="#" data-command='h1'>H1</a>
+                           <a href="#" data-command='h2'>H2</a>
+                           <a href="#" data-command='createlink'><i class='fa fa-link'></i></a>
+                           <a href="#" data-command='unlink'><i class='fa fa-unlink'></i></a>
+                           <a href="#" data-command='insertimage'><i class='fa fa-image'></i></a>
+                           <a href="#" data-command='p'>P</a>
+                           <a href="#" data-command='subscript'><i class='fa fa-subscript'></i></a>
+                           <a href="#" data-command='superscript'><i class='fa fa-superscript'></i></a>
+                         </div>
+                       
+                       <div contenteditable="true" id="textareaDifferences" style="border:none;min-height:100%; width: 100%;overflow: scroll; box-shadow: 0px 0px 4px 1px grey;"></div>
+                   </div>
+               
+                   <button id="btn-export" onclick="exportHTML();" class="btn-dark mt-2 mb-5" style="padding: 7px 14px;"><i class="fas fa-cloud-download-alt"></i> Download as word
+                       doc</button>
+               </div>
+               <div align="right" class="shareBtn" id="shareBtn">
+                   <h4>Helpful? Please Share With Your Friends On:</h4>
+                   <button class="twtShare" data-js="twitter-share"><i class="fab fa-twitter"></i> Twitter</button>
+                   <button class="fbShare" data-js="facebook-share"><i class="fab fa-facebook-f"></i> Facebook</button>
+                   <button class="fbShare" data-js="facebook-share"><a href="mailto:info@example.com?&subject=&body=http://docufix.ga Hey! I just compared my files for similarities on Docufix"><i class="fas fa-envelope"></i> Email</a></button>
+               </div>
+            </section>
 
             <!-- <div id="text" style="display: none;">
                     <section id="text-compare">
@@ -1232,24 +1270,39 @@
             document.getElementById("upload1").addEventListener("change", function(e){
                 var upload1 = document.getElementById("upload1");
                 var label = document.getElementById("label1");
+                var invalid = document.getElementById("invalid-feedback");
                 if( e.target.files[0].name.includes(".png") || e.target.files[0].name.includes(".jpg")){
-                    upload1.classList.add("is-invalid");
+                    invalid.style.display = "block";
                 }else {
-                    upload1.classList.remove("is-invalid");
+                    invalid.style.display = "none";
                     label.textContent = e.target.files[0].name;
+                    label.classList.remove("btn-link");
                 }
             });
             document.getElementById("upload2").addEventListener("change", function(e){
                 var upload2 = document.getElementById("upload2");
                 var label = document.getElementById("label2");
+                var invalid = document.getElementById("invalid-feedback1");
                 if(e.target.files[0].name.includes(".png") || e.target.files[0].name.includes(".jpg")){
-                    upload2.classList.add("is-invalid");
+                    invalid.style.display = "block";
                 }else {
-                    upload2.classList.remove("is-invalid");
+                    invalid.style.display = "none";
+                    label.classList.remove("btn-link");
                     label.textContent =  e.target.files[0].name;
                 }
             });
     </script>
-      
+      <script>
+          options = {
+        success: function(files){
+         
+        },
+        cancel: function(){
+                 
+        },
+};
+var button = Dropbox.createChooseButton(options);
+document.getElementById("button3").appendChild(button);
+      </script>
     </body>
 </html>
