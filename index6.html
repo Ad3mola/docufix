@@ -338,8 +338,8 @@
                     <form class="mb-5" id="uploadForm" method="POST" enctype="multipart/form-data">
                         <div class="row mt-5">
                             <div class="col-md-6">
-                                <div class="card">
-                                    <div class="card card-body " style="background-color:rgba(61, 155, 218, 0.4);">
+                                <div class="">
+                                    <div class="card card-body  pb-5" style="background-color:rgba(61, 155, 218, 0.4);">
                                         <div class=" mx-auto bg-light" style="border-radius: 50%;height: 100%; width: 20%" ><img src="./Vector1.svg" class="p-2" width="100%"></div>
                                         
         
@@ -356,16 +356,15 @@
                                             class="custom-file-input"
                                                     style="border: 0;background-color:rgba(61, 155, 218, 0.4);" required
                                                 />
-                                                <div id="button3" class="p-3"></div>
-                                                <div class="invalid-feedback">
+                                                <div class="invalid-feedback pb-5">
                                                     No Images Allowed
                                                   </div>
                                             </div></div>
                                 </div>
                             </div>
                             <div class="col-md-6 mt-5 mt-md-0">
-                                <div class="card">
-                                        <div class="card card-body" style="background-color:rgba(61, 155, 218, 0.4);">
+                                <div class="pb-5">
+                                        <div class="card card-body pb-5" style="background-color:rgba(61, 155, 218, 0.4);">
                                                 <div class=" mx-auto bg-light" style="border-radius: 50%;height: 100%; width: 20%" ><img src="./Vector1.svg" class="p-2" width="100%"></div>
                                                     <p class="font-weight-bold">Upload file here</p>
                                                 <div class="custom-file col-md-8 mx-auto">
@@ -376,8 +375,7 @@
                                                     id="upload2" for="secondDocument" type="file" name="file2" accept="" class="custom-file-input"
                                                         style="border: 0;background-color: transparent;" required
                                                     />
-                                                    <div id="button4" class="p-3"></div>
-                                                    <div class="invalid-feedback">
+                                                    <div class="invalid-feedback pb-5">
                                                         No Images Allowed
                                                       </div>
                                                 </div></div>
@@ -1334,42 +1332,6 @@
                     label.textContent =  e.target.files[0].name;
                 }
             });
-    </script>
-    <script>
-        
-
-options1 = {
-        success: function(files){
-            var upload1 = document.getElementById("upload1");
-            var label = document.getElementById("label1");
-            upload1.value =  files[0].link;
-            label.textContent = files[0].name;
-        },
-        cancel: function(){
-                 console.log("error")
-        },
-        linkType: "preview",
-        multiselect: false,
-
-};
-var button = Dropbox.createChooseButton(options1);
-document.getElementById("button3").appendChild(button);
-options2 = {
-        success: function(files){
-            var upload2 = document.getElementById("upload2");
-            var label = document.getElementById("label2");
-            upload2.value =  files[0].link;
-            label.textContent = files[0].name;
-        },
-        cancel: function(){
-                 console.log("error")
-        },
-        linkType: "preview",
-        multiselect: false,
-
-};
-var button = Dropbox.createChooseButton(options2);
-document.getElementById("button4").appendChild(button);
     </script>
       
     </body>
