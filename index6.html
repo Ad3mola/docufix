@@ -176,6 +176,9 @@
     #modal-content {
       padding: 0px;
     }
+    #textAreaBefore{
+      border-right:0 !important;
+    }
   }
 
   .active a {
@@ -366,7 +369,7 @@
   </header>
   <div class="container mt-5" style="min-height: 100vh">
 
-      <div class="row">
+      <div class="row m-1">
           <div class="col-md-7 bg-light"  style="border: 1px solid #999">
               <div class="row">
                   <div class="bg-light col-md-4" style="height: 100%; width:100%;"></div>
@@ -379,7 +382,7 @@
           <div class="col-md-4 bg-light ml-3 mt-4 mt-md-0" style="border: 1px solid #999">
                   <h4 class="mb-5">Other Tools:</h4>
                   <a class="btn btn-sm rounded-pill font-weight-bold" style="color: #1818b9;background-color: rgb(213, 214, 221)">Grammar check</a>
-                  <a class="btn btn-sm rounded-pill font-weight-bold" style="color: #1818b9;background-color: rgb(213, 214, 221)">Check for Duplicates</a>
+                  <a class="btn btn-sm rounded-pill font-weight-bold mt-2 mt-md-0" style="color: #1818b9;background-color: rgb(213, 214, 221)">Check for Duplicates</a>
                   <div class="btn btn-link float-right " style="cursor: pointer;"  onclick="instruction()">Instructions</div>
           </div>
       </div>
@@ -570,10 +573,10 @@
             src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/butfaguuckar9dl0i1ug.png"
             width="23" height="23" style="margin-right: 10px;">Compare</button>
       </div> -->
-      <div class="row card mt-4" style="background-color: white">
+      <div class="row card mt-4 m-1" style="background-color: white">
           <div class="row">
-              <div class="col-md-6 text-center pr-0">
-                  <div class="card-header pr-0" style="border-bottom: 1px solid black">Duplicate Text</div>
+              <div class="col-md-6 text-center  pr-md-0">
+                  <div class="card-header" style="border-bottom: 1px solid black">Duplicate Text</div>
                   <div class="card-body p-0" >
                       <textarea
                           placeholder="Write your text here"
@@ -581,11 +584,11 @@
                           id="textareaBefore"
                           cols=""
                           rows="10"
-                          style="width: 100%; border:0;border-bottom: 1px solid black;border-right: 1px solid black"
+                          style="border:0;border-bottom: 1px solid black;border-right: 1px solid black"
                       ></textarea>
                   </div>
               </div>
-              <div class="col-md-6 text-center pl-0 mt-4 mt-md-0">
+              <div class="col-md-6 text-center pl-md-0 mt-4 mt-md-0">
                   <div class="card-header" style="border-bottom: 1px solid black">
                       Original Text
                   </div>
@@ -596,7 +599,7 @@
                           id="textareaAfter"
                           cols=""
                           rows="10"
-                          style="width: 100%;border:0;border-bottom: 1px solid black"
+                          style="border:0;border-bottom: 1px solid black"
                       ></textarea>
                   </div>
               </div>
