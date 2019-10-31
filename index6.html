@@ -133,7 +133,9 @@
   }
 
   .active1 {
-    color: black;
+    color: white;
+    font-weight:bold;
+    background-color: #1818b9;
   }
 
   textarea {
@@ -363,10 +365,28 @@
     </div>
   </header>
   <div class="container mt-5" style="min-height: 100vh">
-    <div class="btn btn-secondary btn-sm float-right bg-secondary" style="cursor: pointer"  onclick="instruction()">Instructions</div>
+
+      <div class="row">
+          <div class="col-md-7 bg-light"  style="border: 1px solid #999">
+              <div class="row">
+                  <div class="bg-light col-md-4" style="height: 100%; width:100%;"></div>
+                  <div class="col-md-8">
+                      <h4>Grammar check Each:</h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil placeat dicta enim harum perspiciatis, quaerat laboriosam excepturi blanditiis </p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4 bg-light ml-3 mt-4 mt-md-0" style="border: 1px solid #999">
+                  <h4 class="mb-5">Other Tools:</h4>
+                  <a class="btn btn-sm rounded-pill font-weight-bold" style="color: #1818b9;background-color: rgb(213, 214, 221)">Grammar check</a>
+                  <a class="btn btn-sm rounded-pill font-weight-bold" style="color: #1818b9;background-color: rgb(213, 214, 221)">Check for Duplicates</a>
+                  <div class="btn btn-link float-right " style="cursor: pointer;"  onclick="instruction()">Instructions</div>
+          </div>
+      </div>
+    
     <div>
-    <h3 class="mt-5 pt-5">Upload files to Compare documents</h3>
-    <h2 class="text-center text-light p-3 mt-5 " style="background-color:rgba(61, 155, 218, 0.4);">
+        
+    <!-- <h2 class="text-center text-light p-3 mt-5 ">
       <span class="text-light mr-md-5 pr-md-5 active1"><a href="#" id="fileBtn" class="active1 pb-1"
           style="text-decoration: none; margin-right: 10px;"><img class="top-icons"
             src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193844/samples/figma%20career-list/lario/xisa8mltboqmepbzjqks.png">File</a></span><span
@@ -374,7 +394,18 @@
           style="text-decoration: none; margin-left: 10px"><img class="top-icons"
             src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193193/samples/figma%20career-list/lario/slpij76xxh4f7bpixbr5.png">Text
         </a></span>
-    </h2>
+    </h2> -->
+    <div class="row mt-5">
+        <div class="col-md-12 text-center">
+            <div class="btn p-0 rounded-pill" style="background-color: rgb(212, 208, 208)">
+                <div class="btn-sm btn-link btn rounded-pill active1"  id="fileBtn"><a href="#" class=" px-5"
+                  style="text-decoration: none; margin-right: 10px;">File</a></div>
+                <div class="btn-sm btn-link btn rounded-pill"  id="textBtn"><a class="px-5" href="#"
+                  style="text-decoration: none; margin-left: 10px">Text
+                </a></div>
+            </div>
+        </div>
+    </div>
     <div id="file">
       <div class="text-center mt-5">
         <form class="mb-5" id="uploadForm" method="POST" enctype="multipart/form-data">
@@ -490,16 +521,6 @@
                   height="16px" width="16px"> upload Files</button> 
           </div>
         </form>
-
-
-
-
-
-
-
-
-
-
       </div>
     </div>
   </div>
@@ -511,7 +532,7 @@
     </div>
     <div id="status"></div>
     <div id="text" style="display: none;">
-      <div class="row mt-5">
+      <!-- <div class="row mt-5">
         <div class="col-md-5">
           <div class="card">
             <div class="card-header text-light" style="background-color:rgba(51, 138, 196, 0.4);">
@@ -548,6 +569,42 @@
             class="compare-img"
             src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571193103/samples/figma%20career-list/lario/butfaguuckar9dl0i1ug.png"
             width="23" height="23" style="margin-right: 10px;">Compare</button>
+      </div> -->
+      <div class="row card mt-4" style="background-color: white">
+          <div class="row">
+              <div class="col-md-6 text-center pr-0">
+                  <div class="card-header pr-0" style="border-bottom: 1px solid black">Duplicate Text</div>
+                  <div class="card-body p-0" >
+                      <textarea
+                          placeholder="Write your text here"
+                          class=""
+                          id="textareaBefore"
+                          cols=""
+                          rows="10"
+                          style="width: 100%; border:0;border-bottom: 1px solid black;border-right: 1px solid black"
+                      ></textarea>
+                  </div>
+              </div>
+              <div class="col-md-6 text-center pl-0 mt-4 mt-md-0">
+                  <div class="card-header" style="border-bottom: 1px solid black">
+                      Original Text
+                  </div>
+                  <div class="card-body p-0">
+                      <textarea
+                          placeholder="Write your text here"
+                          class=""
+                          id="textareaAfter"
+                          cols=""
+                          rows="10"
+                          style="width: 100%;border:0;border-bottom: 1px solid black"
+                      ></textarea>
+                  </div>
+              </div>
+              <div class="text-center col-md-12 m-3">
+                      <button value="compare" class="btn font-weight-bold text-light rounded-pill px-5"
+                        style="background-color: #1818b9;" type="submit" onclick="buttonCompareClicked();"> Compare</button>
+                    </div>
+          </div>
       </div>
       <div>
         <table class="table table-striped">
