@@ -16,16 +16,16 @@
   <link rel="stylesheet" type="text/css" href="./css/wysiwyg.css">
   <link rel="stylesheet" type="text/css" href="css/fileupload.css">
   
-  <script type="text/javascript" src ="//widget.instabot.io/jsapi/rokoInstabot.js" crossorigin>
+  <!-- <script type="text/javascript" src ="//widget.instabot.io/jsapi/rokoInstabot.js" crossorigin>
     apiKey: "vXj90M2ifAvu8fS739jFKepTXtES72ur59sGR5TPK9c="
-    </script>
+    </script> -->
     </head>
     <body style="background-color:  white; font-family: Ubuntu;"
     onload="view()">
         <!--Header-->
         <div class="w3-container" >
             <div id="id01" class="w3-modal" >
-              <div class="w3-modal-content mb-2 mt-5 mt-md-0">
+              <div class="w3-modal-content mb-2 mt-5 mt-md-0 mx-auto" style="max-width: 65%">
                 <span onclick="document.getElementById('id01').style.display='none'"
                   class="w3-button w3-display-topright mb-0">&times;</span>
                   
@@ -69,14 +69,14 @@
               </div>
             </div>
           </div>
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light fixed-top mb-5 pt-4 pb-1" style="background-color: white">
-                <a class="navbar-brand px-3" href="#"><img src="https://res.cloudinary.com/kuic/image/upload/v1572602189/docufix/Docufix_Logo_pzbbzi.png" alt="DOCUFIX"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
+        <header >
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top mb-5 pt-1 pb-1" style="background-color: white">
+                <a class="navbar-brand px-sm-5 ml-3"  href="#" style="width: 17%"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" style="width: 100%;height:100%"></a>
+                <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon border-0"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ml-auto" id="nav">
                         <li class="nav-item">
                             <a
                                 class="nav-link text-center px-5"
@@ -139,8 +139,8 @@
                         <div class="row pt-2">
                             <div class=" mx-auto bg-light my-auto " style="border-radius: 50%;height: 120px; min-width: 120px;color: white;"> </div>
                             <div class="col-md-8 p-2 text">
-                                <h4 class="font-weight-bold">Compare Files:</h4>
-                                <p> Docufix is one of the most innovative Technology of our age. Built solidly with the latest technical tools for file and data management. </p>
+                                <h4 class="">Compare Files:</h4>
+                                <p style="font-weight: normal;"> Docufix is one of the most innovative Technology of our age. Built solidly with the latest technical tools for file and data management. </p>
                             </div>
                         </div>
                     </div>
@@ -166,9 +166,9 @@
               <div class="row mt-5">
                   <div class="col-md-12 text-center">
                     <div class="btn p-0 rounded-pill py-2" style=" background-color: rgba(59, 31, 158, 0.05)">
-                      <div class="btn-sm btn rounded-pill active1 px-0"  id="fileBtn" ><span class=" px-5 py-3 rounded-pill "
+                      <div class="btn-sm btn rounded-pill active1 px-0"  id="fileBtn" ><span class=" px-5 py-3 rounded-pill text"
                         style="text-decoration: none; margin-right: 10px;">File</span></div>
-                      <div class="btn-sm btn rounded-pill px-0"  id="textBtn" style="cursor: pointer"><span class="px-5 py-3 rounded-pill " 
+                      <div class="btn-sm btn rounded-pill px-0"  id="textBtn" style="cursor: pointer"><span class="px-5 py-3 rounded-pill text" 
                         style="text-decoration: none; margin-left: 10px">Text
                       </span></div>
                   </div>
@@ -569,28 +569,31 @@
             
         <!--Footer-->
         <footer id="footer">
-            <nav class="navbar navbar-expand-lg navbar-light justify-content-center small">
-              <div>
-                <ul class="navbar-nav mr-auto ">
-                  <li class="nav-item">
-                    <a class="nav-link text-center" href="#">&copy; 2019 Copyright HNG Internship</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-center" href="faq.html">FAQ</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-center" href="#">Contact Us</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link text-center" href="privacy.html">Privacy Policy</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-center" href="#">Terms of Service</a>
-                  </li>
-                </ul>
+          <div class="container mt-3 mb-3">
+            <div class="row">
+              <div class="col-sm-12 text-center">
+                  <ul class="list-inline text-center">
+                      <li class="list-inline-item">
+                        <a class="text-center" href="#">&copy; 2019 Copyright <a href="https://hng.tech/">HNG</a>  Internship</a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="text-center" href="faq.html">FAQ</a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="text-center" href="feedback.html">Feedback</a>
+                      </li>
+                      <li class="list-inline-item">
+                          <a class="text-center" href="privacy.html">Privacy Policy</a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="text-center" href="termsOfService.html">Terms of Service</a>
+                      </li>
+                    </ul>
               </div>
-          </nav>
-      </footer>
+            </div>
+          </div>
+          <p class="text-center">This app was built by <a href="https://hng.tech/">HNGi6</a> interns</p>
+  </footer>
         
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -1090,14 +1093,21 @@ $(window).on("scroll", function() {
                   var removed = Math.floor(this.passages[0].text.length);
                   var added = Math.floor(this.passages[1].text.length);
           
-          
-                  var similarity = Math.floor((textBefore.length - (removed + added)) / textBefore.length * 100);
-                  var difference = Math.floor(100 - similarity);
+                 
+                  
+                  var difference = Math.floor((((textBefore.length + textAfter.length) - (removed + added))/(textBefore.length + textAfter.length))*100);
+                  var similarity =  Math.floor(100 - difference);
                   var returnValue = "";
           
                   if (this.doPassagesMatch == true) {
                     returnValue = this.passages[0].text;
                     returnValue = this.escapeStringForHTML(returnValue);
+                    if(similarity <= 0){
+                      document.getElementById('percentageD').textContent = `${difference}`;
+                      document.getElementById('percentageS').textContent = ` ${similarity}`;
+                      document.getElementById('added').textContent = `${added} `;
+                      document.getElementById('deleted').textContent = `${removed} `;
+                    }
                   }
                   else {
                     returnValue += "<mark style='background-color:red'>";
