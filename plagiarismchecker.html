@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+ <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Docufix | About us</title>
+        <title>Docufix | Plagiarism check</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#3B1F9E" />
         <link rel="manifest" href="manifest.json" />
         <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/privacy-policy.css">
+        <link rel="stylesheet" type="text/css" href="css/plagiarism-checker.css">
         <link rel="stylesheet" type="text/css" href="css/header&footer.css">
         <link rel="icon" type="image/png" href="https://res.cloudinary.com/thecavemann/image/upload/v1571839870/logo_g4kuoa.png"/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
         <!--Header-->
-       <header>
+        <header>
           <nav class="navbar navbar-expand-lg navbar-light scrolling-navbar fixed-top">
             <a class="navbar-brand px-sm-5 ml-3" href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,49 +63,94 @@
             </div>
           </nav>
     </header>
-      <!--Main-->
+        <!--Main-->
+        <div class="container-fluid content ">
+          <div class="row ml-3 justify-content-between fc ">
 
-      <!-- About Us Page Starts Here | Authored by @ssd  -->
+              <div class="col-xs-6 col-md-6 col-sm-6 col-lg-8">
 
-      <div class="container">
-          <h2 class="about-title">About Docufix</h2>
-          <br>
-          <div class="about-text">
-          <p><a href="index.html"><b>Docufix</b></a>
-              is one of the most innovative Technology of our age. Built solidly with the latest technical tools for 
-              file and data management. This Magnificient tool was built by the most intellectual young coders from <a href="https://hng.tech/" target="_blank">HNGi6</a> 
-              Internship.
-            
-          </p>
+                <div class="row compare col-lg-12 .animated  .slideInLeft">
+                  <div class="col-xs-12 mt-1 col-sm-12 col-lg-3">
+                    <img src="ci.PNG" class="rounded-circle" width="160px" height="160px">
+                  </div>
+                    <div class="col-xs-12 mt-5 col-sm-12 col-md-12 col-lg-8 ">
+                      <h3>Check For Plagiarism</h3>
+                      <p>Docufix is one of the most innovative Technology of our age. Built solidly with the latest technical tools for file and data management.</p>
+                    </div>
+                  </div>
+                </div>
+
+              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 other mr-5 pt-5 px-4 align-items-end">
+                  <h5>Other Tools:</h5>
+                  <div class="row justify-content-around button mt-4">
+                     <a href="#" class="btn col-5 " role="button">Grammar check</a>
+                    <a href="#" class="btn col-6 " role="button">Check for duplicates</a>
+                  </div>
+              </div>
+          </div>
+        
+          <div class="container pt-5 mt-3 folder mb-5">
+            <div class="row no-gutters justify-content-center mx-n3">
+                <div class="col-lg-12 col-sm-12 col-xs-12 text-start comp-txt">
+                    <h6>Please enter your text below and press Check! </h6>
+                </div> 
+                
+                <form method="post" class="form-group col-11 mt-3" name="text">
+                    <textarea type="text" name="text" class="form-control rounded-0" id="FormControlTextarea" rows="15" placeholder="Type or paste here.." maxlength="1000" ></textarea>
+                    <div class="col-lg-2 col-xs-12 col-sm-12 btn-3 text-center mt-5 mb-5 justify-content-center">
+                      <a href="#"><button type="button" class=" btn">Check!</button></a>
+                    </div>
+                </form>
+                <div class="row container mx-3 justify-content-between mt-4">
+                    <div class="col-lg-5 col-xs-12 col-sm-12 upload">
+                      <h6>Or Upload File (.tex, .txt, .doc, .docx, .odt, .pdf, .rtf):</h6>
+                      <form method="post" class="custom-file" enctype="multipart/form-data" name="file">
+                        <input type="file" class="custom-file-input" id="customFileLang" lang="en">
+                        <label class="custom-file-label" for="customFileLang"></label>
+                        <div class="col-lg-2 col-xs-12 col-sm-12 btn-3 text-center mt-5 mb-5 justify-content-center">
+                          <a href="#"><button type="button" class=" btn">Check!</button></a>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="col-lg-5 col-xs-12 col-sm-12 url">
+                      <h6 class="url-txt">Check Plagiarism via Webpage URL</h6>
+                      <form method="post" name="url">
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <button class="btn btn-url" type="button">@</button>
+                          </div>
+                          <input type="url" class="form-control" placeholder="url"> 
+                        </div>
+                         <div class="col-lg-2 col-xs-12 col-sm-12 btn-3 text-center mt-5 mb-5 justify-content-center">
+                            <a href="#"><button type="button" class=" btn">Check!</button></a>
+                        </div>
+                      </form>
+                    </div>
+                </div>
+
+                
+            </div>
+            {%if text %}
+                <p>The text extracted is> <b> {{text}} </b></p>
+                {% else %}
+                No text
+                {% endif %}
+    
+                <script src="js/app.js" type=""></script>
+          </div>
+
+
+        </div> 
           
-          <p>
-              With the help of our finest refined data management algorithm, we help you sort, arrange, compare and extract 
-              information from different file formats. We give you the Super power to compare two totally different documents 
-              in different file formats. With <a href="index.html">Docufix</a> you have the potential to know exactly the difference and similarities 
-              between two files, extract texts from the files and also download the files in file formats like: .docx, .pdf
-            
-          </p>
-          
-          <p>
-              This tool is as easy as picking up your mobile phone to send a text message. Simply go to the comparison page, 
-              paste your copied texts to compare, or click on file upload your file type and extract and compare.
-            
-          </p>
-
-          <p>Check here for our <a href="disclaimer.html">Disclaimer</a> and <a href="privacy.html">Privacy</a> policies</p>
-        </div>
-        </div>       
-
-        <!-- About Us Page Ends Here | Authored by @ssd  -->
-     
-      <!--Footer-->
-      <footer id="footer">
+                
+        <!--Footer-->
+       <footer id="footer">
               <div class="container mt-3 mb-3">
                 <div class="row">
                   <div class="col-sm-12 text-center">
                       <ul class="list-inline text-center">
                           <li class="list-inline-item">
-                            <a class="text-center" href="#">&copy; 2019 Copyright Docufix</a>
+                            <p class="text-center" href="#">&copy; 2019 Copyright <a href="index.html">Docufix</a></p>
                           </li>
                           <li class="list-inline-item">
                             <a class="text-center" href="faq.html">FAQ</a>
@@ -134,15 +179,15 @@
         var SCROLLING_NAVBAR_OFFSET_TOP = 100;
         $(window).on("scroll", function() {
           var $navbar = $(".navbar");
-        
-          if ($navbar.length) {
-            if ($navbar.offset().top > SCROLLING_NAVBAR_OFFSET_TOP) {
-              $(".scrolling-navbar").addClass("top-nav-collapse");
-            } else {
-              $(".scrolling-navbar").removeClass("top-nav-collapse");
-            }
-          }
-        });
-      </script>
+
+  if ($navbar.length) {
+    if ($navbar.offset().top > SCROLLING_NAVBAR_OFFSET_TOP) {
+      $(".scrolling-navbar").addClass("top-nav-collapse");
+    } else {
+      $(".scrolling-navbar").removeClass("top-nav-collapse");
+    }
+  }
+});
+        </script>
       </body>
 </html>

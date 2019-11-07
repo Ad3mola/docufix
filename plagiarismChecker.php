@@ -1,22 +1,28 @@
+<?php
+          session_start();
+          if (!isset($_SESSION['loggedin'])) {
+              header('Location: login.php');
+              exit();
+         }
+   ?>
+
 <!DOCTYPE html>
  <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Docufix | Privacy Policy</title>
+        <title>Plagiarism Checker</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#3B1F9E" />
-        <link rel="manifest" href="manifest.json" />
         <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/privacy-policy.css">
+        <link rel="stylesheet" type="text/css" href="css/plagiarism-checker.css">
         <link rel="stylesheet" type="text/css" href="css/header&footer.css">
         <link rel="icon" type="image/png" href="https://res.cloudinary.com/thecavemann/image/upload/v1571839870/logo_g4kuoa.png"/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
         <!--Header-->
-        <header>
+       <header>
           <nav class="navbar navbar-expand-lg navbar-light scrolling-navbar fixed-top">
             <a class="navbar-brand px-sm-5 ml-3" href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,10 +40,10 @@
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item text-justify" href="fileUpload.html">Compare files</a>
-                    <a class="dropdown-item text-justify" href="grammarChecker.html">Grammar Check</a>
-                    <a class="dropdown-item text-justify" href="fileDuplicate.html">Duplicates Check</a>
-                    <a class="dropdown-item text-justify" href="plagiarismChecker.html">Plagiarism Check</a>
-                    <a class="dropdown-item text-justify" href="paraphrase.html">Paraphrasing tool</a>
+                    <a class="dropdown-item text-justify" href="grammarChecker.php">Grammar Check</a>
+                    <a class="dropdown-item text-justify" href="fileDuplicate.php">Duplicates Check</a>
+                    <a class="dropdown-item text-justify" href="plagiarismChecker.php">Plagiarism Check</a>
+                    <a class="dropdown-item text-justify" href="paraphrase.php">Paraphrasing tool</a>
                   </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -56,7 +62,7 @@
                     <a class="nav-link text-center" href="teampage.html">Our Team</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-center" href="login.php">Login</a>
+                  <a class="nav-link text-center" href="logout.php">Log Out</a>
                 </li>
                 
               </ul>
@@ -64,26 +70,84 @@
           </nav>
     </header>
         <!--Main-->
-        <div class="container">
-            <h2>Privacy Policy</h2>
-            <div class="container content mb-5 text-wrapper" >
-                  <p>This privacy policy has been compiled to show the information we collect, how we make use of it, user choices as to how we make use of such information provided, how we treat your personal data and protect your privacy when you use our services. Therefore we encourage every user of our products or services to carefully read this policy. If you use Docufix, you agreed to the terms and conditions laid out in this policy.</p>
+        <div class="container-fluid content ">
+          <div class="row ml-3 justify-content-between fc ">
 
-                  <p><b>Docufix</b>
-                  as a document comparison and analytical tool, at this point does not require any user to sign in or sign up for an account before using its tool. Neither is there any payment via credit card or any other form required before use, as our solution is made online for free, and open to all to use - individual, enterprise or organizations. All you simply need to do as a user to get started is to select your comparing documents and upload to see results; which is simple and fast. For later versions, that may include new features that require certain user data, the purpose, and the method(s) of user data collection will be specified. Also this privacy policy page will be updated to suit the new arrangements.</p>
+              <div class="col-xs-6 col-md-6 col-sm-6 col-lg-8">
 
-                  <p>Like many sites, we collect information your browser sends each time you visit our website. This is simply called “Log Data”, and may include certain information such as your Internet Protocol (IP) address, browser type and version, pages visited on our site, time and date of the visit, time spent on those pages and other statistics; using cookies for research regarding the effectiveness of the website and the marketing, advertising and sales efforts of Docufix, and its trusted affiliates.</p>
+                <div class="row compare col-lg-12 ">
+                  <div class="col-xs-12 mt-1 col-sm-12 col-lg-3">
+                    <img src="ci.PNG" class="rounded-circle" width="160px" height="160px">
+                  </div>
+                    <div class="col-xs-12 mt-5 col-sm-12 col-md-12 col-lg-8 ">
+                      <h3>Check For Plagiarism</h3>
+                      <p>Docufix is one of the most innovative Technology of our age. Built solidly with the latest technical tools for file and data management.</p>
+                    </div>
+                  </div>
+                </div>
 
-                  <p>Any emails you send to Docufix, and our replies to you are retained in Docufix email archives to assist in providing you the highest level of service possible. And any action to process in due course, we process with your consent and/or with another legal basis basically to fulfill the purpose of your interaction with us.</p>
-
-                  <p>Documents you compare are protected by a secret URL and stored in a secured server. Acccess to a third party except to the extent required by law are not allowed. However, anyone you share the URL with can view the comparison.</p>
-
-                  <p>Please contact us with any questions regarding the Docufix Privacy Policy by email: info@docufix.com</p>
+              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 other mr-5 pt-5 px-4 align-items-end">
+                  <h5>Other Tools:</h5>
+                  <div class="row justify-content-around button mt-4">
+                     <a href="grammarChecker.html" class="btn col-5 " role="button">Grammar check</a>
+                    <a href="fileDuplicate.html" class="btn col-6 " role="button">Duplicates check</a>
+                  </div>
+              </div>
+          </div>
+        
+          <div class="container pt-5 mt-3 folder mb-5">
+            <div class="row no-gutters justify-content-center mx-n3">
+                <div class="col-lg-12 col-sm-12 col-xs-12 text-start comp-txt">
+                    <h6>Please enter your text below and Check! </h6>
+                </div> 
                 
+                <form method="post" class="form-group col-11 mt-3" name="text">
+                    <textarea type="text" name="text" class="form-control rounded-0" id="FormControlTextarea" rows="15" placeholder="Type or paste here.." maxlength="1000" ></textarea>
+                    <div class="col-lg-2 col-xs-12 col-sm-12 btn-3 text-center mt-5 mb-5 justify-content-center">
+                     <input type="submit" class="btn btn-primary" value="Check!">
+                    </div>
+                </form>
+                <div class="row container mx-3 justify-content-between mt-4">
+                    <div class="col-lg-5 col-xs-12 col-sm-12 upload">
+                      <h6>Or Upload File (.tex, .txt, .doc, .docx, .odt, .pdf, .rtf):</h6>
+                      <form method="post" class="custom-file" enctype="multipart/form-data" name="file">
+                        <input type="file" class="custom-file-input" id="customFileLang" lang="en" name="file">
+                        <label class="custom-file-label" for="customFileLang"></label>
+                        <div class="col-lg-2 col-xs-12 col-sm-12 btn-3 text-center mt-5 mb-5 justify-content-center">
+                         <input type="submit" class="btn btn-primary" value="Check!">
+                        </div>
+                      </form>
+                    </div>
+                    <div class="col-lg-5 col-xs-12 col-sm-12 url">
+                      <h6 class="url-txt">Check Plagiarism via Webpage URL</h6>
+                      <form method="post" name="url">
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <button class="btn btn-url" type="button">@</button>
+                          </div>
+                          <input type="text" class="form-control" placeholder="url" name="url"> 
+                        </div>
+                        <div class="col-lg-2 col-xs-12 col-sm-12 btn-3 text-center mt-5 mb-5 justify-content-center">
+                         <input type="submit" class="btn btn-primary" value="Check!">
+                        </div>
+                      </form>
+                    </div>
+                </div>
+
             </div>
-        </div>
+                {%if text %}
+                <p>The text extracted is> <b> {{text}} </b></p>
+                {% else %}
+                No text
+                {% endif %}
+    
+                <script src="js/app.js" type=""></script>
+            
+          </div>
+        </div> 
+          
         <!--Footer-->
-        <footer id="footer">
+       <footer id="footer">
               <div class="container mt-3 mb-3">
                 <div class="row">
                   <div class="col-sm-12 text-center">
@@ -110,7 +174,7 @@
               <p class="text-center">This app was built by <a href="https://hng.tech/" target="_blank">HNGi6</a> interns</p>
       </footer>
        
-        <script src="js/app.js"></script>
+        
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

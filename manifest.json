@@ -13,7 +13,7 @@
         "type": "image/png"
       },
       {
-        "src": "https://res.cloudinary.com/olaleye247/image/upload/v1571768274/128_wyhesa.png",
+        "src": "https://res.cloudinary.com/thecavemann/image/upload/v1571839870/logo_g4kuoa.png",
         "sizes": "128x128",
         "type": "image/png"
       },
@@ -33,18 +33,18 @@
         "type": "image/png"
       },
       {
-        "src": "https://res.cloudinary.com/olaleye247/image/upload/v1571768547/384_dvcwn8.png",
+        "src": "https://res.cloudinary.com/thecavemann/image/upload/v1571839870/logo_g4kuoa.png",        
         "sizes": "384x384",
         "type": "image/png"
       },
       {
-        "src": "https://res.cloudinary.com/olaleye247/image/upload/v1571768274/d8_yky5a2.png",
+        "src": "https://res.cloudinary.com/thecavemann/image/upload/v1571839870/logo_g4kuoa.png",
         "sizes": "512x512",
         "type": "image/png"
       }
     ],
     "start_url": "/index.html",
     "display": "standalone",
-    "background_color": "#ddd",
+    "background_color": "#3B1F9E",
     "theme_color": "#333"
   }
